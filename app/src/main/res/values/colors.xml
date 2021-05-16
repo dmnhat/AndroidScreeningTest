@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="circular_progress">#FF5722</color>
+    <color name="colorPrimary">#2D2D2D</color>
+    <color name="colorPrimaryVariant">#000000</color>
 </resources>
