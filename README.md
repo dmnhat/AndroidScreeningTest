@@ -9,4 +9,5 @@ A simple timer application which provides below features:
 3. The application should notifiy user with sound, vibration and simple dialog when time is over. 
 
 
+<img width="331" alt="ScreeningTestv0 2" src="https://user-images.githubusercontent.com/12388421/118386560-7ca1b000-b642-11eb-8db4-3697095040af.png">
 
