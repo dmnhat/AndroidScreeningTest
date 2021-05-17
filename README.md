@@ -7,8 +7,12 @@ A simple timer application which provides below features:
 	- A circle to present the progress of timer (0% -100%)
 2. The timer must be able to run when the application is in background
 3. The application should notifiy user with sound, vibration and simple dialog when time is over. 
+4. Notes: 
+	+  minSdkVersion = 21
+	+  kotlin_version = "1.4.32"
 
 
-![Screenshot_1621248060](https://user-images.githubusercontent.com/12388421/118475927-12b70280-b737-11eb-800d-9f0bc5ad2c26.png)
+![Screenshot_1621248060](https://user-images.githubusercontent.com/12388421/118476912-4e9e9780-b738-11eb-8af1-326cad16b2ec.png)
+
 
 
