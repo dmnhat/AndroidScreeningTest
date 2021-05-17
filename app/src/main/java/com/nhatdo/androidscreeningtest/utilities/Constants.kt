@@ -20,7 +20,6 @@ const val CHANNEL_ID : String = BuildConfig.APPLICATION_ID
 const val CHANNEL_NAME : String = "ALARM APP"
 
 const val NOTIFICATION_ID : Int = 123098
-const val LABEL_NOTIFICATION_ID = "NOTIFICATION_ID"
 const val NOTIFICATION_WORK = BuildConfig.APPLICATION_ID+"_work"
 
 
