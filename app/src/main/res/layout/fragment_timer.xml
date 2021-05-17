@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onStartStopClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="onCancelClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.nhatdo.androidscreeningtest.viewmodels.TimerViewModel"/>
+    </data>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="600dp">
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    style="@style/CircularDeterminateProgressBar"
+                    android:layout_width="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="@{viewModel.millisToText}"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:visibility="invisible"/>
+                <LinearLayout
+                    android:id="@+id/timePicker"
+                    android:layout_width="300dp"
+                    android:padding="40dp"
+                    android:gravity="center"
+                    android:layout_height="400dp"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:weightSum="3">
+                    <NumberPicker
+                        android:id="@+id/numberPickerHours"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:theme="@style/timePicker"
+                        android:layout_height="wrap_content" />
+                    <NumberPicker
+                        android:id="@+id/numberPickerMinutes"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:theme="@style/timePicker"
+                        android:layout_height="wrap_content" />
+                    <NumberPicker
+                        android:id="@+id/numberPickerSeconds"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:theme="@style/timePicker"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnStartStop"
+                android:layout_width="wrap_content"
+                android:layout_margin="30dp"
+                android:textAllCaps="true"
+                android:background="@drawable/rounder_button"
+                android:onClick="@{onStartStopClick}"
+                android:text="@{viewModel.actionStartStopLabel()}"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Cancel"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounder_button"
+                android:onClick="@{onCancelClick}"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+</layout>
